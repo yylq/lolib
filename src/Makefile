@@ -7,7 +7,7 @@ SOURCE_CPP := $(wildcard *.c)
 OBJECTS := $(SOURCE_CPP:%.c=%.o)
 
 		
-FAST_LIB=fastlib.a
+FAST_LIB=libfast.a
 
 %.o: %.c
 	$(CC) ${INCLUDES} -o $@ -c $< $(CPPFLAGS)
@@ -19,5 +19,7 @@ $(FAST_LIB):$(OBJECTS)
 clean:
 	rm -rf $(FAST_LIB) *.o
 install:
-	cp  -f *.h ../include 
+	mkdir  -p /usr/local/include/fast/
+	cp  -f *.h /usr/local/include/fast/.
+	mv ${FAST_LIB} /usr/local/lib/.
 

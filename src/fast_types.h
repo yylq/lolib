@@ -135,14 +135,14 @@
 #endif
 
 #include <sys/sysctl.h>
-#include <sys/prctl.h>
+
 #include <crypt.h>
 #include <sys/utsname.h>           /* uname() */
 #include <sys/sendfile.h>
 #include <sys/epoll.h>
 #include <aio.h>
 #include <openssl/md5.h>
-#include <pcre.h>
+
 #include <pthread.h>               /* thread support */
 
 #ifndef FAST_OFF_T_LEN
